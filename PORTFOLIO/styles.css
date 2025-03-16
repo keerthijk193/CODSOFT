@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    padding: 20px;
+}
+
+header {
+    background-color: navy;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: yellow;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+.hero-image{
+    width:auto
+
+}
+.hero-text h1 {
+    color: navy;
+}
+
+.hero-text span {
+    color: navy;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: navy;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: yellow;
+    color: navy;
+}
+
+section {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    width: 20%;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    border: 2px solid navy;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: navy;
+    color: yellow;
+    border-radius: 10px;
+}
+
+/* Skills Section */
+#skills {
+    text-align: center;
+    padding: 50px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.skills-list li {
+    background: linear-gradient(135deg, navy, yellow);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+.skills-list li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+}
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    width: 2%; /* Adjust as needed */
+    min-width: 20px; /* Ensure it doesn’t shrink too much */
+    background-color: yellow;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    flex: 1; /* Takes up remaining space */
+    padding: 20px;
+}
+.hero-image {
+    max-width: 50%; /* Ensures image takes only 50% of the hero section */
+    height: auto; /* Maintains aspect ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%; /* Makes sure the image scales within the hero section */
+    max-height: 400px; /* Prevents the image from becoming too large */
+    object-fit: contain; /* Ensures the image fits well */
+    border-radius: 10px; /* Adds rounded corners for consistency */
+}
